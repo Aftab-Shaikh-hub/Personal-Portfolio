@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Porfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/58bda5bb95.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <h1 class="logo">AFTAB</h1>
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#mywork">My Work</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Full-Stack Developer</p>
+                <h1>Hi, I'm <span>Aftab</span><br>Shaikh From India</h1>
+            </div>
+        </div>
+    </div>
+<!-- ----------------about-------------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/men.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Hi, I'm Aftab, a passionate Full Stack Developer dedicated to building modern, scalable, and user-centric web applications. I specialize in creating responsive and interactive user interfaces while developing robust backend solutions using the MERN Stack.
+
+With a strong foundation in C, C++, Java, Python, PHP, R, React.js, Node.js, Express.js, MySQL, and MongoDB, I enjoy transforming ideas into real-world digital solutions. I value clean code, performance, and continuous learning, always striving to enhance my skills and stay updated with modern technologies.
+
+Currently pursuing a Bachelor of Computer Applications (BCA), I am actively seeking opportunities to collaborate, grow as a developer, and contribute to meaningful software projects.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills',event)">skills</p>
+                        <p class="tab-links" onclick="opentab('projects',event)">Projects</p>
+                        <p class="tab-links" onclick="opentab('education',event)">Education</p>
+                        <p class="tab-links" onclick="opentab('certificates',event)">Certificates</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>💻 Programming Languages</span><br>Proficient in C, C++, Java, Python, PHP, and R, enabling the development of efficient, scalable, and high-performance applications.</li>
+                            <li><span>🌐 Frontend Development</span><br>Building modern, responsive, and interactive web applications using HTML5, CSS3, JavaScript, Bootstrap, and React.js.</li>
+                            <li><span>⚙️ Backend Development</span><br>Developing secure, scalable, and high-performance server-side applications using Node.js, Express.js, and RESTful APIs</li>
+                            <li><span>🗄️ Database Management</span><br>Designing, managing, and optimizing relational and NoSQL databases using MySQL and MongoDB.</li>
+                            <li><span>🚀 MERN Stack Development</span><br>Developing full-stack web applications using MongoDB, Express.js, React.js, and Node.js with modern development practices.</li>
+                            <li><span>🛠️ Tools & Version Control</span><br>Using Git, GitHub, and VS Code for version control, collaboration, and efficient software development.</li>
+                            <li><span>🎨 UI/UX Design</span><br>Designing clean, responsive, and user-friendly interfaces with a strong focus on usability, accessibility, and modern design principles.</li>
+                        </ul>
+                    </div>
+                      <div class="tab-contents"  id="projects">
+                        <ul>
+                            <li>
+                                <span>🌐 Personal Portfolio Website</span><br>📝 Designed and developed a fully responsive personal portfolio website to showcase my skills, projects, certificates, and contact information with a modern and user-friendly interface.
+                                <br>🛠️ Technologies Used: HTML5, CSS3, JavaScript, Bootstrap
+                                <br>📂 GitHub Repository:<a href="#" target="_blank">View Code</a>
+                                <br>💻 Live Demo<a href="#" target="_blank">Live Demo</a>
+                            </li>
+                            <li>
+                                <span>🧮 Calculator Web Application</span><br>📝 Developed a responsive calculator capable of performing basic arithmetic operations with a clean and intuitive user interface.
+                                <br>🛠️ Technologies Used: HTML5, CSS3, JavaScript
+                                <br>📂 GitHub Repository:<a href="https://github.com/Aftab-Shaikh-hub/Calculator" target="_blank">View Code</a>
+                                <br>💻 Live Demo<a href="https://aftab-shaikh-hub.github.io/Calculator/calculator.html" target="_blank">Live Demo</a>
+                            </li>                    
+                            <li>
+                                <span>🎮 Tic Tac Toe Game</span><br>📝 Built an interactive Tic Tac Toe game with dynamic gameplay logic, winning conditions, and a simple user-friendly interface.
+                                <br>🛠️ Technologies Used: HTML5, CSS3, JavaScript
+                                <br>📂 GitHub Repository:<a href="https://github.com/Aftab-Shaikh-hub/Tic-Tac-Toe-Game" target="_blank">View Code</a>
+                                <br>💻 Live Demo<a href="https://aftab-shaikh-hub.github.io/Tic-Tac-Toe-Game/tic-tac-toe.html" target="_blank">Live Demo</a>
+                            </li>
+                            <li>
+                                <span>🌐 Network Traffic Analyzer</span><br>📝 Developed a Python-based network monitoring tool that captures and analyzes network packets, classifies TCP, UDP, and ICMP traffic, and provides traffic insights with visualization.
+                                <br>🛠️ Technologies Used: Python, Scapy, Tkinter, Matplotlib, CSV
+                                <br>📂 GitHub Repository:<a href="https://github.com/Aftab-Shaikh-hub/Network-Traffic-Analyzer-NTA-using-Python" target="_blank">View Code</a>
+                                <br>💻 Live Demo<a href="https://aftab-shaikh-hub.github.io/Network-Traffic-Analyzer-NTA-using-Python/network_traffic_analyzer.py" target="_blank">Live Demo</a>
+                            </li>
+                            <li>
+                                <span>🤖 AI Interview Coach (In Progress)</span><br>📝 Currently developing an AI-powered interview preparation platform that helps users practice interviews, analyze responses, and receive intelligent feedback.
+                                <br>🛠️ Technologies Used: MongoDB, Express.js, React.js, Node.js, AI APIs
+                                <br>📂 GitHub Repository:<a href="#" target="_blank">Working...</a>
+                                <br>💻 Live Demo<a href="#" target="_blank">Working...</a>
+                            </li>
+                            <li>
+                                <span>📚 Smart Study Assistant (In Progress)</span><br>📝 Currently working on a smart learning platform that helps students manage study materials, track progress, and improve productivity with personalized learning features.
+                                <br>🛠️ Technologies Used: MongoDB, Express.js, React.js, Node.js
+                                <br>📂 GitHub Repository:<a href="#" target="_blank">Working...</a>
+                                <br>💻 Live Demo<a href="#" target="_blank">Working...</a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tab-contents"  id="education">
+                        <ul>
+                            <li><span>2024 - Present</span><br>Bachelor of Computer Applications (BCA) – Science from Deogiri College, Aurangabad</li>
+                            <li><span>2022 – 2024</span><br>Higher Secondary Certificate (HSC) – Science from Mualana Azad College, Aurangabad</li>
+                            <li><span>2020 – 2022</span><br>Secondary School Certificate (SSC) from Trimurti High School, Aurangabad</li>
+
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="certificates">
+                        <ul>
+                            <li><span>UI/UX Design & Web Development Training</span><br>IT Hub Institute (E-MAX)
+                                <br>Skills Covered:HTML, CSS, JavaScript, Bootstrap, C Programming</li>
+                            <li><span>Programming & Software Development Training</span><br>Disha Institute
+                                <br>Skills Covered:C++, Java, MERN Stack(MongoDB, Express.js, React.js, Node.js)</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- ------------------services--------------------- -->
+ <div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Frontend Development</h2>
+                <p>Building responsive and interactive user interfaces using HTML, CSS, JavaScript, Bootstrap, and React.js.</p>
+                <a href="#">Learn more</a>                
+            </div>   
+             <div>
+                <i class="fa-solid fa-crop-simple"></i>
+                <h2>Backend Development</h2>
+                <p>Developing secure and scalable server-side applications using Node.js, Express.js, and REST APIs.</p>
+                <a href="#">Learn more</a>               
+            </div>
+             <div>
+                <i class="fa-brands fa-app-store"></i>
+                <h2>Full Stack Development</h2>
+               <p>Creating complete web applications using MERN Stack technologies like MongoDB, Express.js, React.js, and Node.js.</p>
+               <a href="#">Learn more</a>                
+            </div>     
+        </div>
+    </div>
+ </div>
+
+
+ <!-- -----------------portfolio-------------------------->
+
+
+ <div id="mywork">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/one.jpg">
+                <div class="layer">
+                    <h3>Network Traffic Analyzer</h3>
+                    <p>A Python-based network monitoring tool that captures and analyzes network packets, classifies TCP/UDP/ICMP traffic, and provides real-time traffic insights with data visualization.</p>
+                    <a href="https://aftab-shaikh-hub.github.io/Network-Traffic-Analyzer-NTA-using-Python/network_traffic_analyzer.py"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+             <div class="work">
+                <img src="images/two.jpg">
+                <div class="layer">
+                    <h3>AI Interview Coach (MERN Stack + AI)</h3>
+                    <p>An intelligent interview preparation platform that helps users practice interviews, analyze responses, and improve their communication and technical skills using AI-powered features.(in progress)</p>
+                    <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+             <div class="work">
+                <img src="images/three.jpg">
+                <div class="layer">
+                    <h3>E-Commerce Website (MERN Stack)</h3>
+                    <p>A full-stack online shopping platform with product management, user authentication, cart functionality, and a responsive user interface.(in progress))</p>
+                    <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">See more</a>
+    </div>
+ </div>
+<!-- -------------------contact-------------------------->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i>aaftabshaikh917299@gmail.com</p>
+                <p><i class="fa-solid fa-square-phone"></i>9172995149</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/shaikh.khadeer.56614"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.twitter.com/@RehanShaik6102"><i class="fa-brands fa-twitter-square"></i></a>
+                    <a href="https://www.instagram.com/amredeye"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/aaftab-shaikh-55791736a/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BinBaTVKfS8uDvZ6gOG8rmA%3D%3D"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <a href="./Aftab_Shaikh_CV.pdf" class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form action="https://formspree.io/f/xnjeyzyd" method="POST">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your email" required>
+                    <textarea name="message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright &copy; Aaftab Shaikh</p>
+    </div>
+</div>
+
+
+<script>
+
+// -------- Tabs Function --------
+
+var tablinks = document.getElementsByClassName("tab-links");
+var tabcontents = document.getElementsByClassName("tab-contents");
+
+function opentab(tabname, event){
+
+    for(let tablink of tablinks){
+        tablink.classList.remove("active-link");
+    }
+
+    for(let tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab");
+    }
+
+    event.currentTarget.classList.add("active-link");
+
+    document.getElementById(tabname).classList.add("active-tab");
+
+}
+
+</script>
+
+
+
+
+</body>
+</html>
