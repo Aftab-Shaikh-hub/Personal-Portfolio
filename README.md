@@ -61,17 +61,13 @@ A smart learning platform designed to help students manage study materials and i
 ## 📸 Screenshots
 
 <img width="1879" height="1830" alt="image" src="https://github.com/user-attachments/assets/c3f91601-de5f-446a-82ad-271c11609490" />
-
-
-## 🌍 Live Demo
-
-(Add your GitHub Pages link here)
+<img width="1882" height="915" alt="image" src="https://github.com/user-attachments/assets/401a35a8-eddc-4624-b297-97a6c5c6ea50" />
 
 ## 📬 Contact
 
 **Aaftab Shaikh**
 
-- LinkedIn: (Your LinkedIn Link)
+- LinkedIn: https://www.linkedin.com/in/aaftab-shaikh-55791736a/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BinBaTVKfS8uDvZ6gOG8rmA%3D%3D
 - GitHub: https://github.com/Aftab-Shaikh-hub
 - Email: aaftabshaikh917299@gmail.com
 
