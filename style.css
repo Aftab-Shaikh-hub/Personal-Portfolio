@@ -7,26 +7,31 @@
 
 html{
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body{
     background: #080808;
     color: #fff;
+    overflow-x: hidden;
+}
 
+img{
+    max-width: 100%;
 }
 
 #header{
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background-image: url(images/mainhome.jpg);
     background-size: cover;
     background-position: center;
-
 }
 
 .container{
     padding: 10px 10%;
-
+    max-width: 1500px;
+    margin: 0 auto;
 }
 
 
@@ -41,7 +46,6 @@ nav{
     width: 140px;
     color: #ff004f;
     font-style: italic;
-
 }
 
 nav ul li{
@@ -72,15 +76,32 @@ nav ul li a:hover::after{
     width: 100%;
 }
 
+/* hamburger + close buttons are hidden on large screens */
+.menu-open,
+.menu-close-item{
+    display: none;
+}
+
+.menu-open,
+.menu-close{
+    background: none;
+    border: 0;
+    color: #fff;
+    font-size: 26px;
+    cursor: pointer;
+}
+
 .header-text{
-    margin-top: 20%;
-    font-size: 30px;
+    margin-top: 20vh;
+    font-size: clamp(18px, 3vw, 30px);
 }
 
 .header-text h1{
-    font-size: 60px;
-    margin-top:20px;
+    font-size: clamp(34px, 7vw, 60px);
+    margin-top: 20px;
+    line-height: 1.2;
 }
+
 .header-text h1 span{
     color: #ff004f;
 }
@@ -109,22 +130,26 @@ nav ul li a:hover::after{
 
 .about-col-2{
     flex-basis: 60%;
-    
 }
+
+.about-col-2 > p{
+    line-height: 1.6;
+}
+
 .sub-title{
-    font-size: 60px;
+    font-size: clamp(34px, 7vw, 60px);
     font-weight: 600;
     color: #fff;
 }
 
 .tab-titles{
     display: flex;
+    flex-wrap: wrap;
+    gap: 14px 50px;
     margin: 20px 0 40px;
-
 }
 
 .tab-links{
-    margin-right: 50px;
     font-size: 18px;
     font-weight: 500;
     cursor: pointer;
@@ -144,17 +169,23 @@ nav ul li a:hover::after{
 
 .tab-links.active-link::after{
     width: 50%;
-    
 }
 
 .tab-contents ul li{
     list-style-type: none;
     margin: 10px 0;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
 }
 
 .tab-contents ul li span{
     color:#b54769;
     font-size: 14px;
+}
+
+.tab-contents ul li a{
+    color: #ff004f;
+    margin-left: 6px;
 }
 
 .tab-contents{
@@ -169,16 +200,14 @@ nav ul li a:hover::after{
 
 #services{
     padding: 30px 0;
-    
 }
 
 .services-list{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
     grid-gap: 40px;
-    margin-top: 50px;    
+    margin-top: 50px;
 }
-
 
 .services-list div{
     background: #262626;
@@ -188,7 +217,6 @@ nav ul li a:hover::after{
     border-radius: 10px;
     transition: background 0.5s, transform 0.5s;
 }
-
 
 .services-list div i{
     font-size: 50px;
@@ -215,28 +243,23 @@ nav ul li a:hover::after{
 }
 
 
-
-
-
 /*--------------------------portfolio------------------------------------------*/
 
-
-#portfolio{
+#mywork{
     padding: 50px 0;
 }
 
 .work-list{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
     grid-gap: 40px;
-    margin-top: 50px;  
+    margin-top: 50px;
 }
 
 .work{
     border-radius: 10px;
     position: relative;
     overflow: hidden;
-    
 }
 
 .work img{
@@ -263,14 +286,11 @@ nav ul li a:hover::after{
     text-align: center;
     font-size: 14px;
     transition: height 0.5s;
-
 }
-
 
 .layer h3{
     font-weight: 500;
     margin-bottom: 20px;
-
 }
 
 .layer a{
@@ -282,15 +302,14 @@ nav ul li a:hover::after{
     background: #fff;
     width: 60px;
     height: 60px;
+    flex-shrink: 0;
     border-radius: 50%;
     text-align: center;
 }
 
-
 .work:hover img{
     transform: scale(1.1);
 }
-
 
 .work:hover .layer{
     height: 100%;
@@ -310,7 +329,6 @@ nav ul li a:hover::after{
 
 .btn:hover{
     background: #ff004f;
-
 }
 
 
@@ -324,9 +342,9 @@ nav ul li a:hover::after{
     flex-basis: 60%;
 }
 
-
 .contact-left p{
     margin-top: 30px;
+    overflow-wrap: anywhere;
 }
 
 .contact-left p i{
@@ -335,27 +353,23 @@ nav ul li a:hover::after{
     font-size: 25px;
 }
 
-
 .social-icons{
     margin-top: 30px;
-
 }
 
 .social-icons a{
     text-decoration: none;
     font-size: 30px;
-    margin-right: 15;
+    margin-right: 15px;
     color: #ababab;
     display: inline-block;
     transition: transform 0.5s;
 }
 
-
 .social-icons a:hover{
     color: #ff004f;
     transform: translateY(-5px);
 }
-
 
 .btn.btn2{
     display: inline-block;
@@ -378,13 +392,16 @@ form input, form textarea{
     border-radius: 6px;
 }
 
+form textarea{
+    resize: vertical;
+}
+
 form .btn2{
     padding: 14px 60px;
     font-size: 18px;
     margin-top: 20px;
     cursor: pointer;
 }
-
 
 .copyright{
     width: 100%;
@@ -395,9 +412,226 @@ form .btn2{
     margin-top: 20px;
 }
 
-
 #msg{
     color: #61b752;
     margin-top: -40px;
     display: block;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+   ===================================================== */
+
+/* ---------- Laptops / small desktops ---------- */
+@media (max-width: 1200px){
+    .container{
+        padding: 10px 7%;
+    }
+}
+
+/* ---------- Tablets & below: slide-in mobile menu ---------- */
+@media (max-width: 850px){
+
+    .menu-open{
+        display: block;
+    }
+
+    .menu-close-item{
+        display: block;
+    }
+
+    nav ul{
+        background: #ff004f;
+        position: fixed;
+        top: 0;
+        right: -240px;
+        width: 220px;
+        height: 100vh;
+        padding-top: 60px;
+        z-index: 10;
+        transition: right 0.5s;
+        box-shadow: -10px 0 30px rgba(0,0,0,0.4);
+    }
+
+    nav ul.open{
+        right: 0;
+    }
+
+    nav ul li{
+        display: block;
+        margin: 22px 25px;
+    }
+
+    nav ul li a::after{
+        display: none;
+    }
+
+    .menu-close-item{
+        position: absolute;
+        top: 15px;
+        left: 22px;
+        margin: 0;
+    }
+
+    .header-text{
+        margin-top: 18vh;
+    }
+
+    /* About: stack image above text */
+    #about{
+        padding: 60px 0;
+    }
+
+    .about-col-1,
+    .about-col-2{
+        flex-basis: 100%;
+    }
+
+    .about-col-1{
+        margin-bottom: 40px;
+    }
+
+    .about-col-1 img{
+        display: block;
+        max-width: 380px;
+        margin: 0 auto;
+    }
+
+    /* Contact: stack columns */
+    .contact-left,
+    .contact-right{
+        flex-basis: 100%;
+    }
+
+    .contact-right{
+        margin-top: 40px;
+    }
+
+    #msg{
+        margin-top: 10px;
+    }
+}
+
+/* ---------- Phones ---------- */
+@media (max-width: 600px){
+
+    .container{
+        padding: 10px 6%;
+    }
+
+    .logo{
+        font-size: 26px;
+    }
+
+    .header-text{
+        margin-top: 15vh;
+    }
+
+    #about{
+        padding: 40px 0;
+    }
+
+    .tab-titles{
+        gap: 12px 28px;
+        margin: 20px 0 30px;
+    }
+
+    .tab-links{
+        font-size: 16px;
+    }
+
+    #services{
+        padding: 20px 0;
+    }
+
+    .services-list{
+        grid-gap: 25px;
+        margin-top: 30px;
+    }
+
+    .services-list div{
+        padding: 28px 24px;
+    }
+
+    .services-list div i{
+        font-size: 40px;
+        margin-bottom: 20px;
+    }
+
+    .services-list div h2{
+        font-size: 24px;
+    }
+
+    .work-list{
+        grid-gap: 25px;
+        margin-top: 30px;
+    }
+
+    .layer{
+        padding: 0 20px;
+        font-size: 12px;
+    }
+
+    .layer h3{
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
+
+    .layer a{
+        margin-top: 12px;
+        width: 46px;
+        height: 46px;
+        line-height: 46px;
+        font-size: 16px;
+    }
+
+    .btn{
+        margin: 35px auto;
+        padding: 12px 36px;
+    }
+
+    form input, form textarea{
+        font-size: 16px;   /* prevents iOS zoom on focus */
+        padding: 13px;
+    }
+
+    form .btn2{
+        width: 100%;
+        padding: 14px 20px;
+        font-size: 16px;
+    }
+
+    .contact-left .btn2{
+        width: 100%;
+        text-align: center;
+    }
+
+    .social-icons a{
+        font-size: 28px;
+        margin-right: 12px;
+    }
+}
+
+/* ---------- Very small phones ---------- */
+@media (max-width: 380px){
+
+    .tab-titles{
+        gap: 10px 20px;
+    }
+
+    .tab-links{
+        font-size: 15px;
+    }
+
+    .services-list div h2{
+        font-size: 21px;
+    }
+}
+
+/* ---------- Touch devices: no hover, so keep tap feedback sensible ---------- */
+@media (hover: none){
+    .services-list div:hover{
+        transform: none;
+    }
 }
