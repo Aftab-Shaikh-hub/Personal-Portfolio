@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Porfolio Website</title>
+    <title>Personal Portfolio Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/58bda5bb95.js" crossorigin="anonymous"></script>
 </head>
@@ -12,7 +15,9 @@
         <div class="container">
             <nav>
                 <h1 class="logo">AFTAB</h1>
-                <ul>
+                <button class="menu-open" type="button" aria-label="Open menu" onclick="openmenu()"><i class="fa-solid fa-bars"></i></button>
+                <ul id="sidemenu">
+                    <li class="menu-close-item"><button class="menu-close" type="button" aria-label="Close menu" onclick="closemenu()"><i class="fa-solid fa-xmark"></i></button></li>
                     <li><a href="#header">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#services">Services</a></li>
@@ -31,7 +36,7 @@
         <div class="container">
             <div class="row">
                 <div class="about-col-1">
-                    <img src="images/men.jpg">
+                    <img src="images/men.jpg" alt="Aftab Shaikh">
                 </div>
                 <div class="about-col-2">
                     <h1 class="sub-title">About Me</h1>
@@ -157,7 +162,7 @@ Currently pursuing a Bachelor of Computer Applications (BCA), I am actively seek
         <h1 class="sub-title">My Work</h1>
         <div class="work-list">
             <div class="work">
-                <img src="images/one.jpg">
+                <img src="images/one.jpg" alt="Network Traffic Analyzer" loading="lazy">
                 <div class="layer">
                     <h3>Network Traffic Analyzer</h3>
                     <p>A Python-based network monitoring tool that captures and analyzes network packets, classifies TCP/UDP/ICMP traffic, and provides real-time traffic insights with data visualization.</p>
@@ -165,7 +170,7 @@ Currently pursuing a Bachelor of Computer Applications (BCA), I am actively seek
                 </div>
             </div>
              <div class="work">
-                <img src="images/two.jpg">
+                <img src="images/two.jpg" alt="AI Interview Coach" loading="lazy">
                 <div class="layer">
                     <h3>AI Interview Coach (MERN Stack + AI)</h3>
                     <p>An intelligent interview preparation platform that helps users practice interviews, analyze responses, and improve their communication and technical skills using AI-powered features.(in progress)</p>
@@ -173,10 +178,10 @@ Currently pursuing a Bachelor of Computer Applications (BCA), I am actively seek
                 </div>
             </div>
              <div class="work">
-                <img src="images/three.jpg">
+                <img src="images/three.jpg" alt="E-Commerce Website" loading="lazy">
                 <div class="layer">
                     <h3>E-Commerce Website (MERN Stack)</h3>
-                    <p>A full-stack online shopping platform with product management, user authentication, cart functionality, and a responsive user interface.(in progress))</p>
+                    <p>A full-stack online shopping platform with product management, user authentication, cart functionality, and a responsive user interface.(in progress)</p>
                     <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
                 </div>
             </div>
@@ -239,6 +244,30 @@ function opentab(tabname, event){
     document.getElementById(tabname).classList.add("active-tab");
 
 }
+
+// -------- Mobile Menu --------
+
+var sidemenu = document.getElementById("sidemenu");
+
+function openmenu(){
+    sidemenu.classList.add("open");
+}
+
+function closemenu(){
+    sidemenu.classList.remove("open");
+}
+
+// close the menu after tapping any link
+document.querySelectorAll("#sidemenu a").forEach(function(link){
+    link.addEventListener("click", closemenu);
+});
+
+// reset the menu if the screen is resized back to desktop width
+window.addEventListener("resize", function(){
+    if(window.innerWidth > 850){
+        closemenu();
+    }
+});
 
 </script>
 
